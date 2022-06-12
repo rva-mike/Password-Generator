@@ -64,11 +64,22 @@ function generatePassword() {
   }
 
 
+  //for loop that uses the password length chosen and the character selections chosen
+  for (i = 0; i < passwordLength; i++) {
+    pwd += userSelection[Math.floor(Math.random() * userSelection.length)]
+  }
+  // console.log(pwd)
 
-
+  // this returns the result of the generatePassword function 
+  return pwd;
 
 
 }
+
+
+
+
+
 
 
 
