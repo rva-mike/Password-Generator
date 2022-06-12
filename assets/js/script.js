@@ -14,6 +14,19 @@ var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var spCharacters = ['@', '%', '+', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
 
 
+function generatePassword() {
+
+  var passwordLength = parseInt(prompt("How long do you want your password (must be between 8-125)"))
+  console.log(passwordLength)
+  if (passwordLength < 8 || passwordLength > 125 || isNaN(passwordLength)) {
+    alert("Password must be between 8 - 125 characters");
+    generatePassword(); //recursive function call
+    // return; //returns undefined
+  }
+
+}
+
+
 
 
 
