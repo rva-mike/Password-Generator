@@ -21,10 +21,25 @@ function generatePassword() {
   if (passwordLength < 8 || passwordLength > 125 || isNaN(passwordLength)) {
     alert("Password must be between 8 - 125 characters");
     generatePassword(); //recursive function call
-    // return; //returns undefined
+    // return; (returns undefined)
   }
 
+    // Prompts for character types
+
+    var upperCaseChoice = confirm("Would you like your password to contain uppercase characters?");
+
+    var lowerCaseChoice = confirm("Would you like your password to contain lowercase characters?");
+  
+    var numChoice = confirm("Would you like your password to contain numbers?");
+  
+    var spChoice = confirm("Would you like your password to contain special characters?");
+
+
+
+
 }
+
+
 
 
 
