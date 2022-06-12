@@ -24,15 +24,31 @@ function generatePassword() {
     // return; (returns undefined)
   }
 
-    // Prompts for character types
+  // Prompts for character types
 
-    var upperCaseChoice = confirm("Would you like your password to contain uppercase characters?");
+  var upperCaseChoice = confirm("Would you like your password to contain uppercase characters?");
 
-    var lowerCaseChoice = confirm("Would you like your password to contain lowercase characters?");
-  
-    var numChoice = confirm("Would you like your password to contain numbers?");
-  
-    var spChoice = confirm("Would you like your password to contain special characters?");
+  var lowerCaseChoice = confirm("Would you like your password to contain lowercase characters?");
+
+  var numChoice = confirm("Would you like your password to contain numbers?");
+
+  var spChoice = confirm("Would you like your password to contain special characters?");
+
+
+  if (!upperCaseChoice && !lowerCaseChoice && !numChoice && !spChoice) {
+    alert("You must select at least one option")
+    generatePassword();
+    // return;
+  }
+
+  if (!upperCaseChoice && !lowerCaseChoice && !numChoice && !spChoice) {
+    alert("You must select at least one option")
+    generatePassword();
+    // return;
+  }
+
+
+
 
 
 
