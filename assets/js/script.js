@@ -11,7 +11,7 @@ var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 //Special Characters
-var spCharacters = ['@', '%', '+', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
+var spCharacters = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
 
 
 
@@ -23,9 +23,9 @@ function generatePassword() {
 
 
   //prompt for password length
-  var passwordLength = parseInt(prompt("How long do you want your password (must be between 8-125)"))
+  var passwordLength = parseInt(prompt("How long do you want your password to be (must be between 8-128)"))
   console.log(passwordLength)
-  if (passwordLength < 8 || passwordLength > 125 || isNaN(passwordLength)) {
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     alert("Password must be between 8 - 125 characters");
     generatePassword(); //recursive function call
     // return; (returns undefined)
@@ -65,26 +65,16 @@ function generatePassword() {
 
 
   //for loop that uses the password length chosen and the character selections chosen
-  for (i = 0; i < passwordLength; i++) {
+  for(i = 0; i < passwordLength; i++) {
     pwd += userSelection[Math.floor(Math.random() * userSelection.length)]
   }
   // console.log(pwd)
 
   // this returns the result of the generatePassword function 
   return pwd;
-
+  
 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
