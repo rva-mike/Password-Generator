@@ -14,8 +14,15 @@ var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var spCharacters = ['@', '%', '+', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
 
 
+
 function generatePassword() {
 
+  //password variable and user character selection variable
+  var pwd = "";
+  var userSelection = []
+
+
+  //prompt for password length
   var passwordLength = parseInt(prompt("How long do you want your password (must be between 8-125)"))
   console.log(passwordLength)
   if (passwordLength < 8 || passwordLength > 125 || isNaN(passwordLength)) {
@@ -24,8 +31,8 @@ function generatePassword() {
     // return; (returns undefined)
   }
 
-  // Prompts for character types
 
+  // Prompts for character types
   var upperCaseChoice = confirm("Would you like your password to contain uppercase characters?");
 
   var lowerCaseChoice = confirm("Would you like your password to contain lowercase characters?");
@@ -35,18 +42,26 @@ function generatePassword() {
   var spChoice = confirm("Would you like your password to contain special characters?");
 
 
+  //conditional for no character selections being chosen
   if (!upperCaseChoice && !lowerCaseChoice && !numChoice && !spChoice) {
     alert("You must select at least one option")
     generatePassword();
     // return;
   }
 
-  if (!upperCaseChoice && !lowerCaseChoice && !numChoice && !spChoice) {
-    alert("You must select at least one option")
-    generatePassword();
-    // return;
+  //conditionals for user's character selection
+  if (lowerCaseChoice) {
+    userSelection = userSelection.concat(lowerCase)
   }
-
+  if (upperCaseChoice) {
+    userSelection = userSelection.concat(upperCase)
+  }
+  if (numChoice) {
+    userSelection = userSelection.concat(numbers)
+  }
+  if (spChoice) {
+    userSelection = userSelection.concat(spCharacters)
+  }
 
 
 
