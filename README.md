@@ -8,7 +8,7 @@ This application uses javascript to generate a password between 8 - 128 characte
 Current working develop branch:
 Github URL: https://github.com/rva-mike/Password-Generator/tree/develop
 
-Main repository page (have yet to push because of bug)
+Main repository page (have yet to push to 'main' branch because of bug)
 Github URL: https://github.com/rva-mike/Password-Generator
 
 Link to deployed application:
