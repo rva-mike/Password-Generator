@@ -15,3 +15,4 @@ Link to deployed application:
 https://rva-mike.github.io/Password-Generator/
 
 ## Screenshot
+![Password Generator Screenshot](https://user-images.githubusercontent.com/105617274/173972969-6d1e5ba8-9556-4e66-b09e-c1661962b307.png)
