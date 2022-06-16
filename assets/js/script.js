@@ -1,3 +1,6 @@
+
+//Note: There is a bug! I am turning in what I have. The current bug is as follows: The user selects the character sets they want in a password and I have it set up to add those character arrays into an array variable. I then have a for loop that gets the combined/selected character array (userSelected) and chooses a random selection from the array that is the requested password length. HOWEVER, the possibility of not getting a certain selected character exists. I have tried other methods and solutions, but have yet to resolve the issue. I am planning on solving and resubmitting in the future. Thanks
+
 // Assignment code here
 
 
@@ -11,10 +14,10 @@ var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 //Special Characters
-var spCharacters = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
+var spCharacters = ['@', '%', '+', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
 
 
-
+//generate password function
 function generatePassword() {
 
   //password variable and user character selection variable
@@ -23,10 +26,10 @@ function generatePassword() {
 
 
   //prompt for password length
-  var passwordLength = parseInt(prompt("How long do you want your password to be (must be between 8-128)"))
+  var passwordLength = parseInt(prompt("How long do you want your password to be? (must be between 8 - 128 characters)"))
   console.log(passwordLength)
   if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
-    alert("Password must be between 8 - 125 characters");
+    alert("Password must be between 8 - 128 characters");
     generatePassword(); //recursive function call
     // return; (returns undefined)
   }
@@ -50,6 +53,7 @@ function generatePassword() {
   }
 
   //conditionals for user's character selection
+  //if true, the selected character array gets added to the userSelectionArray
   if (lowerCaseChoice) {
     userSelection = userSelection.concat(lowerCase)
   }
@@ -73,10 +77,7 @@ function generatePassword() {
   // this returns the result of the generatePassword function 
   return pwd;
   
-
 }
-
-
 
 
 
